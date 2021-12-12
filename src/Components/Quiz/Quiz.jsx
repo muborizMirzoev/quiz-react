@@ -3,13 +3,17 @@ import './Quiz.css';
 import {data} from "../../Api/data";
 import Results from "../Results/Results";
 import TopBar from "../TopBar/TopBar";
+import {useDispatch, useSelector} from "react-redux";
+import {ADD_ANSWER, CHECK_ANSWER} from "../../Redux/types";
+import {addAnswer} from "../../Redux/actions";
 
 function Quiz() {
+   const dispatch = useDispatch();
+   const userAnswers = useSelector(state => state.userAnswers);
 
    const [currentQuiz, setCurrentQuiz] = useState(0);
-   const [userAnswers, setUserAnswers] = useState({});
    const [disableButton, setDisableButton] = useState(true);
-   const [showQuiz, setShowQuiz] = useState(true)
+   const [showQuiz, setShowQuiz] = useState(true);
 
    function nextQuiz() {
       if ((currentQuiz + 1) < data.length) {
@@ -22,13 +26,7 @@ function Quiz() {
    }
 
    function checkAnswer(event) {
-      const id = event.target.name;
-      setUserAnswers(
-         {
-            ...userAnswers,
-            [id]: {status: event.target.dataset.answer, id: event.target.dataset.id}
-         }
-      );
+      dispatch(addAnswer(event));
       setDisableButton(false)
    }
 
