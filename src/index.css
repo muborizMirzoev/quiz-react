@@ -1,0 +1,88 @@
+
+:root {
+    --text-color: #333333;
+    --border-color: #eeeeee;
+    --main-bg-color: #fff;
+
+    --active-elem-bg: #f8ab47;
+    --active-elem-color: #fff;
+    --data-length-color: #a9a9a9;
+
+    --btn-color: #fff;
+    --btn-bg-color: #51a06c;
+    --btn-bg-color-hover: #67b689;
+
+    --quiz-corect-variant: #060;
+    --quiz-incorect-variant: #d90000;
+    --quiz-incorect-variant-border: #eaaaad;
+    --quiz-corect-variant-border: #bbd4a5;
+
+    --quiz-result-layout-bg: #222;
+    --quiz-result-buttons-bg: #4c4b4b;
+    --quiz-result-layout-color: #7a7a7a;
+    --quiz-result-layout-second-color: #ffffff;
+
+    --indicator-junior: #ffc800;
+    --indicator-middle: #ff7b00;
+    --indicator-senior: #9a0f09;
+}
+
+/* A class added to the <html> element*/
+.dark-mode {
+    /*--text-color: #333333;*/
+    /*--border-color: #eeeeee;*/
+    /*--main-bg-color: #fff;*/
+
+    /*--active-elem-bg: #f8ab47;*/
+    /*--active-elem-color: #fff;*/
+
+    /*--btn-color: #fff;*/
+    /*--btn-bg-color: #51a06c;*/
+
+    /*--quiz-corect-variant: #060;*/
+    /*--quiz-incorect-variant: #d90000;*/
+    /*--quiz-incorect-variant-border: #eaaaad;*/
+    /*--quiz-corect-variant-border: #bbd4a5;*/
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

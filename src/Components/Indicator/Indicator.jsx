@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import indicatorSvg from '../images/indicator.svg'
+import indicatorSvg from '../../images/indicator.svg'
+import './Indicator.css'
 
 const Indicator = ({answers}) => {
 

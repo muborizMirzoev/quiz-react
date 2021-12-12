@@ -1,4 +1,5 @@
 import React from 'react';
+import './ResultQuestions.css'
 
 const ResultQuestions = ({question, userCorrect, userAnswerVariant}) => {
 

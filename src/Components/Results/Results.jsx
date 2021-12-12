@@ -1,6 +1,7 @@
 import React from 'react';
-import Indicator from "./Indicator";
-import ResultQuestions from "./ResultQuestions";
+import Indicator from "../Indicator/Indicator";
+import ResultQuestions from "../ResultQuestions/ResultQuestions";
+import './Results.css'
 
 const Results = ({answers, data}) => {
 
